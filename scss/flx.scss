@@ -1,0 +1,192 @@
+/*a basic flex-box library*/
+
+
+//define our syntax
+
+//if you're not needing to align flexbox containers...
+.flx\(\){
+	display: flex;
+}
+.flx\(wrap\){
+	display: flex;
+	flex-wrap:wrap;
+}
+.flx\(column\){
+	display: flex;
+	flex-direction:column;
+}
+.flx\(nowrap\){
+	display: flex;
+	flex-wrap:nowrap;
+}
+//if column...
+.flx\(nowrap\,column\){
+	display: flex;
+	flex-wrap:nowrap;
+	flex-direction:column;
+}
+.flx\(column\,nowrap\){
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction:column;
+}
+.flx\(column\,wrap\){
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction:column;
+}
+.flx\(wrap\,column\){
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction:column;
+}
+
+//if you do need to align flexbox containers these are effectively the same,
+//but easier to distinguish when writing
+.flx-container\(\){
+	display: flex;
+}
+.flx-container\(wrap\){
+	display: flex;
+	flex-wrap:wrap;
+}
+.flx-container\(column\){
+	display: flex;
+	flex-direction:column;
+}
+.flx-container\(nowrap\){
+	display: flex;
+	flex-wrap:nowrap;
+}
+//if column...
+.flx-container\(nowrap\,column\){
+	display: flex;
+	flex-wrap:nowrap;
+	flex-direction:column;
+}
+.flx-container\(column\,nowrap\){
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction:column;
+}
+.flx-container\(column\,wrap\){
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction:column;
+}
+.flx-container\(wrap\,column\){
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction:column;
+}
+
+
+/*vertical alignment for non flex items*/
+
+.top{
+	align-items: flex-start;
+}
+.bottom{
+	align-items: flex-end;
+}
+.baseline{
+	align-items:baseline;
+}
+.middle{
+	align-items:center;
+}
+.stretch{
+	align-items:stretch;
+}
+
+/*vertical alignment for 'flexible' children*/
+.f-top {
+  align-content: flex-start; }
+
+.f-bottom {
+  align-content: flex-end; }
+
+.f-baseline {
+  align-content: baseline; }
+
+.f-middle {
+  align-content: center; }
+
+.f-stretch {
+  align-content: stretch; }
+.f-space-between {
+	align-content:space-between;
+}
+.f-space-around {
+	align-content:space-around;
+}
+
+/*horizontal alignment*/
+
+.left{
+	justify-content: flex-start;
+}
+.right{
+	justify-content: flex-end;
+}
+.center{
+	justify-content:center;
+}
+.space-evenly{
+	justify-content:space-evenly;
+}
+.space-around{
+	justify-content: space-around;
+}
+.space-between{
+	justify-content: space-between;
+}
+
+//columns
+.is-1{
+
+	min-width: 8.333333333%;
+}
+.is-2{
+
+  	min-width: 16.666666666%;
+}
+.is-3{
+
+  	min-width: 24.999999999%;
+}
+.is-4{
+
+  	min-width: 33.333333333%;
+}
+.is-5{
+
+  	min-width: 41.666666666%;
+}
+.is-6{
+
+  	min-width: 49.999999999%;
+}
+.is-7{
+
+  	min-width: 58.333333333%;
+}
+.is-8{
+
+  	min-width: 66.666666666%;
+}
+.is-9{
+
+  	min-width: 74.999999999%;
+}
+.is-10{
+
+  	min-width: 83.333333333%;
+}
+.is-11{
+
+  	min-width: 91.666666666%;
+}
+.is-12{
+  	min-width: 100%;
+}
