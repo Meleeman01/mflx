@@ -39,11 +39,13 @@ $paragraphs:'Montserrat';
   --info: #{$info};
   --black: #{$black};
   --white: #{$white};
-  --main-title:#{$maintitle};
+  --main-title:'#{$maintitle}';
+  --sub-titles:'#{$subtitles}';
+  --paragraphs:'#{$paragraphs}';
 }
 
 h1{
-	font-family: $maintitle,'sans-serif';
+	font-family: var(--main-title),'sans-serif';
 	font-size: 5em;
 }
 h2{
@@ -51,19 +53,18 @@ h2{
 }
 
 h2,h3,h4,h6{
-	font-family: $subtitles, 'sans';
+	font-family: var(--sub-titles), 'sans';
 }
-body,p,button,a,input{
-	font-family: $paragraphs, 'sans';
+body,p,button,a,input, submit, .link{
+	font-family: var(--paragraphs), 'sans';
 	font-weight: 600;
+	text-decoration: none;
 }
 input, button, submit { border:none; } 
 
-a:link{
-	text-decoration: inherit;
-}
-
-
+.link:link{text-decoration: inherit;}
+.link:visited{color: inherit;}
+.link:hover{ color:lighten($black,2%);}
 
 .primary{
  	background-color:var(--primary);
@@ -115,46 +116,6 @@ a:link{
 	flex-wrap: wrap;
 	flex-direction:column;
 }
-
-//if you do need to align flexbox containers these are effectively the same,
-//but easier to distinguish when writing
-.flx-container\(\){
-	display: flex;
-}
-.flx-container\(wrap\){
-	display: flex;
-	flex-wrap:wrap;
-}
-.flx-container\(column\){
-	display: flex;
-	flex-direction:column;
-}
-.flx-container\(nowrap\){
-	display: flex;
-	flex-wrap:nowrap;
-}
-//if column...
-.flx-container\(nowrap\,column\){
-	display: flex;
-	flex-wrap:nowrap;
-	flex-direction:column;
-}
-.flx-container\(column\,nowrap\){
-	display: flex;
-	flex-wrap: nowrap;
-	flex-direction:column;
-}
-.flx-container\(column\,wrap\){
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction:column;
-}
-.flx-container\(wrap\,column\){
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction:column;
-}
-
 
 /*vertical alignment for non flex items*/
 
@@ -282,8 +243,6 @@ a:link{
   	white-space: nowrap;
   	outline: none;
 }
-
-
 
 //sizes
 .btn\(small\) {

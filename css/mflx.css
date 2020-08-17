@@ -8,27 +8,36 @@
   --info: #1981c2;
   --black: #1f1300;
   --white: #fffaff;
-  --main-title:Arial; }
+  --main-title:'Arial';
+  --sub-titles:'Montserrat';
+  --paragraphs:'Montserrat'; }
 
 h1 {
-  font-family: "Arial", "sans-serif";
+  font-family: var(--main-title), "sans-serif";
   font-size: 5em; }
 
 h2 {
   font-size: 2.5em; }
 
 h2, h3, h4, h6 {
-  font-family: "Montserrat", "sans"; }
+  font-family: var(--sub-titles), "sans"; }
 
-body, p, button, a, input {
-  font-family: "Montserrat", "sans";
-  font-weight: 600; }
+body, p, button, a, input, submit, .link {
+  font-family: var(--paragraphs), "sans";
+  font-weight: 600;
+  text-decoration: none; }
 
 input, button, submit {
   border: none; }
 
-a:link {
+.link:link {
   text-decoration: inherit; }
+
+.link:visited {
+  color: inherit; }
+
+.link:hover {
+  color: #291900; }
 
 .primary {
   background-color: var(--primary); }
@@ -73,41 +82,6 @@ a:link {
   flex-direction: column; }
 
 .flx\(wrap\,column\) {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; }
-
-.flx-container\(\) {
-  display: flex; }
-
-.flx-container\(wrap\) {
-  display: flex;
-  flex-wrap: wrap; }
-
-.flx-container\(column\) {
-  display: flex;
-  flex-direction: column; }
-
-.flx-container\(nowrap\) {
-  display: flex;
-  flex-wrap: nowrap; }
-
-.flx-container\(nowrap\,column\) {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column; }
-
-.flx-container\(column\,nowrap\) {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column; }
-
-.flx-container\(column\,wrap\) {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; }
-
-.flx-container\(wrap\,column\) {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column; }
