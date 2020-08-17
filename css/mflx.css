@@ -283,7 +283,7 @@ a:link {
 
 .is-success {
   background-color: var(--success);
-  color: var(--white); }
+  color: var(--black); }
 
 .is-success:hover {
   background-color: #85c125; }

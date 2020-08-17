@@ -1,4 +1,4 @@
-# flx version 1.1.0
+# mflx version 1.1.0
 
 ##A Basic, no-frills flexbox framework for building layouts!
 <img src="test.html#.png" alt="framework test"
