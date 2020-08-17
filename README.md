@@ -5,7 +5,7 @@
 
 ##Usage
 
-basically this is a barebones wrapper for flexbox and makes it more conveniant to style items and create grid layouts, so you can declare flx() or flx-container() if you intend to have flx() children you intend to position
+basically this is a barebones wrapper for flexbox and makes it more conveniant to style items and create grid layouts
 
 > 
 	<div class="flx(wrap,column) top left"> 
@@ -13,9 +13,7 @@ basically this is a barebones wrapper for flexbox and makes it more conveniant t
 	</div>
 >
 
-as you can see, flx() takes a maximum of 2 arguments exactly as shown. options are wrap, nowrap, and column.
-the same arguments apply for flx-container(), but more complex positioning can be applied if you have children 
-that also have class flx() as shown below.
+as you can see, flx() takes a maximum of 2 arguments exactly as shown. options are wrap, nowrap, and column, but more complex positioning can be applied if you have children that also have class flx() as shown below.
 > 
 	<div class="flx(wrap) middle v-space-around">
 		<div class="flx(wrap)">
@@ -29,7 +27,7 @@ v-top, v-middle, v-stretch, which does what thier non-v counterparts do vertical
 
 also you can do columns! syntax uses "is" like in bulma, and you can say anywhere from is-1 to is-12. 
 > 
-	<div class="flx-container(wrap) center f-space-around is-12">
+	<div class="flx(wrap) center f-space-around is-12">
 		<div class="flx(wrap) is-6">
 			<div class="item1">listItem</div>
 		</div>
