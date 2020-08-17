@@ -1,8 +1,7 @@
 # mflx version 1.1.0
 
 ##A Basic, no-frills flexbox framework for building layouts!
-<img src="test.html#.png" alt="framework test"
-	title="a test of the framework :D" width="100%" height="100" />
+<img src="test.html.png" alt="framework test" title="a test of the framework :D" width="100%" height="100" />
 
 ##Usage
 
