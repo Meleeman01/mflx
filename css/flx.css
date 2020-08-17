@@ -1,4 +1,47 @@
 /*a basic flex-box library*/
+:root {
+  --primary: #6a4c94;
+  --secondary: #ef8801;
+  --success: #8bc926;
+  --warning: #ffca38;
+  --error: #ff575c;
+  --info: #1981c2;
+  --black: #1f1300;
+  --white: #fffaff;
+  --main-title:Arial; }
+
+h1 {
+  font-family: "Arial", "sans-serif";
+  font-size: 5em; }
+
+h2 {
+  font-size: 2.5em; }
+
+h2, h3, h4, h6 {
+  font-family: "Montserrat", "sans"; }
+
+body, p, button, a, input {
+  font-family: "Montserrat", "sans";
+  font-weight: 600; }
+
+input, button, submit {
+  border: none; }
+
+a:link {
+  text-decoration: inherit; }
+
+.primary {
+  background-color: var(--primary); }
+
+.secondary {
+  background-color: var(--secondary); }
+
+.white {
+  background-color: var(--white); }
+
+.black {
+  background-color: var(--black); }
+
 .flx\(\) {
   display: flex; }
 
@@ -86,25 +129,25 @@
   align-items: stretch; }
 
 /*vertical alignment for 'flexible' children*/
-.f-top {
+.v-top {
   align-content: flex-start; }
 
-.f-bottom {
+.v-bottom {
   align-content: flex-end; }
 
-.f-baseline {
+.v-baseline {
   align-content: baseline; }
 
-.f-middle {
+.v-middle {
   align-content: center; }
 
-.f-stretch {
+.v-stretch {
   align-content: stretch; }
 
-.f-space-between {
+.v-space-between {
   align-content: space-between; }
 
-.f-space-around {
+.v-space-around {
   align-content: space-around; }
 
 /*horizontal alignment*/
@@ -161,3 +204,146 @@
 
 .is-12 {
   min-width: 100%; }
+
+.btn\(\) {
+  background-color: var(--white);
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: var(--black);
+  cursor: pointer;
+  font-size: 1em;
+  justify-content: center;
+  padding: calc(0.5em - 1px) 1em;
+  line-height: 1.5em;
+  text-align: center;
+  white-space: nowrap;
+  outline: none; }
+
+.btn\(small\) {
+  background-color: var(--white);
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: var(--black);
+  cursor: pointer;
+  justify-content: center;
+  padding: calc(0.25em - 1px) 0.5em;
+  line-height: 1.5em;
+  text-align: center;
+  white-space: nowrap;
+  font-size: .75em;
+  outline: none; }
+
+.btn\(large\) {
+  background-color: var(--white);
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: var(--black);
+  cursor: pointer;
+  justify-content: center;
+  padding: calc(.75em - 1px) 1.25em;
+  line-height: 1.5em;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1em;
+  outline: none; }
+
+.btn\(xlarge\) {
+  background-color: var(--white);
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: var(--black);
+  cursor: pointer;
+  justify-content: center;
+  padding: calc(0.25em - 1px) 0.5em;
+  line-height: 1.5em;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 2em;
+  outline: none; }
+
+.is-primary {
+  background-color: var(--primary);
+  color: var(--white); }
+
+.is-primary:hover {
+  background-color: #65498d; }
+
+.is-primary:active {
+  background-color: #5e4483; }
+
+.is-secondary {
+  background-color: var(--secondary);
+  color: var(--white); }
+
+.is-secondary:hover {
+  background-color: #e48201; }
+
+.is-secondary:active {
+  background-color: #d57901; }
+
+.is-success {
+  background-color: var(--success);
+  color: var(--white); }
+
+.is-success:hover {
+  background-color: #85c125; }
+
+.is-success:active {
+  background-color: #7cb422; }
+
+.is-warning {
+  background-color: var(--warning);
+  color: var(--black); }
+
+.is-warning:hover {
+  background-color: #ffc72e; }
+
+.is-warning:active {
+  background-color: #ffc31f; }
+
+.is-info {
+  background-color: var(--info);
+  color: var(--white); }
+
+.is-info:hover {
+  background-color: #187bb9; }
+
+.is-info:active {
+  background-color: #1672ac; }
+
+.is-error {
+  background-color: var(--error);
+  color: var(--white); }
+
+.is-error:hover {
+  background-color: #ff4d52; }
+
+.is-error:active {
+  outline: #f00008;
+  background-color: #ff3d44; }
+
+.is-black {
+  background-color: var(--black);
+  color: var(--white); }
+
+.is-black:hover {
+  background-color: #140d00; }
+
+.is-black:active {
+  background-color: var(--black); }
+
+.is-white {
+  background-color: var(--white);
+  color: var(--black); }
+
+.is-white:hover {
+  background-color: #fff0ff; }
+
+.is-white:active {
+  background-color: #ffe0ff; }
+
+.is-round {
+  border-radius: 2em; }
+
+.is-round:active {
+  outline: none; }
