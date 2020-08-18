@@ -1,7 +1,9 @@
 # mflx version 1.1.3
 
-##A Basic, no-frills flexbox framework for building layouts!
+##A Basic, highly customizeable, no-frills micro flexbox framework for building layouts!
 <img src="https://github.com/Meleeman01/mflx/blob/master/test.html%23.png" alt="framework test" title="a test of the framework :D" />
+
+##npm install mflex --save
 
 ##Usage
 
