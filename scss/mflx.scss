@@ -47,8 +47,10 @@ $paragraphs:'Montserrat';
   --padme-setting:0.5em 0.5em 0.5em 0.5em;
   --button-roundness:2em 2em 2em 2em;
 }
+
 :focus {outline:none;}
 ::-moz-focus-inner {border:0}
+
 h1{
 	font-family: var(--main-title),'sans-serif';
 	font-size: var(--title-size);
@@ -60,16 +62,19 @@ h2{
 h2,h3,h4,h6{
 	font-family: var(--sub-titles), 'sans';
 }
-body,p,button,a,input, submit, .link, .is-round:active {
+
+body,p,button,a,textarea, select,input, submit, .link,  {
 	font-family: var(--paragraphs), 'sans';
-	font-weight: 700;
 	text-decoration: none;
 	outline: none;
+	border: none;
+	padding: 0;
 }
-input:focus{border:solid 1px var(--primary);}
-button:focus, submit:focus, a:focus{border:solid 1px black; }
-input, button, submit { border:none; } 
-.btn\(\)[disabled],input[disabled]{background-color: #ccc; color: grey;}
+input:focus,textarea:focus, select:focus {border:solid 1px var(--primary);}
+button:focus, submit:focus, a:focus {border:solid 1px black; }
+
+input, button, submit,.is-round:active{ border:none; } 
+button[disabled],input[disabled],{background-color: #ccc; color: grey;}
 
 .link:link{text-decoration: inherit; color: var(--info);}
 .link:visited{color: var(--info);}
@@ -92,7 +97,7 @@ ul{list-style-type: none; padding: 0;}
 }
 
 //define our syntax
-.flx\(\){
+.flx\(\),.flx{
 	display: flex;
 }
 .flx\(wrap\){
@@ -108,22 +113,15 @@ ul{list-style-type: none; padding: 0;}
 	flex-wrap:nowrap;
 }
 //if column...
-.flx\(nowrap\,column\){
+.flx\(nowrap\,column\),
+.flx\(column\,nowrap\) {
 	display: flex;
 	flex-wrap:nowrap;
 	flex-direction:column;
 }
-.flx\(column\,nowrap\){
-	display: flex;
-	flex-wrap: nowrap;
-	flex-direction:column;
-}
-.flx\(column\,wrap\){
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction:column;
-}
-.flx\(wrap\,column\){
+
+.flx\(column\,wrap\),
+.flx\(wrap\,column\) {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction:column;
@@ -189,6 +187,7 @@ ul{list-style-type: none; padding: 0;}
 .space-between{
 	justify-content: space-between;
 }
+
 //add a little padding to your columns
 .padme {
 	padding: var(--padme-setting);
@@ -199,54 +198,43 @@ ul{list-style-type: none; padding: 0;}
 	min-width: 8.333333333%;
 }
 .is-2{
-
   	min-width: 16.666666666%;
 }
-.is-3{
-
+.is-3,.is-quarter{
   	min-width: 24.999999999%;
 }
-.is-4{
-
+.is-4, .is-one-third{
   	min-width: 33.333333333%;
 }
 .is-5{
-
   	min-width: 41.666666666%;
 }
-.is-6{
-
+.is-6,.is-half{
   	min-width: 49.999999999%;
 }
 .is-7{
-
   	min-width: 58.333333333%;
 }
-.is-8{
-
+.is-8, .is-two-thirds{
   	min-width: 66.666666666%;
 }
-.is-9{
-
+.is-9,.is-three-quarters{
   	min-width: 74.999999999%;
 }
 .is-10{
-
   	min-width: 83.333333333%;
 }
 .is-11{
-
   	min-width: 91.666666666%;
 }
-.is-12{
+.is-12, .is-full{
   	min-width: 100%;
 }
 
 //use on a div span or button ofcourse
 //usage btn(size,type) color
-.btn\(\) {
+.btn\(\),.btn,.btn\(normal\) {
 	background-color:  var(--white);
-  	border-color: #dbdbdb;
   	border-width: 1px;
   	color: var(--black);
   	cursor: pointer;
@@ -262,11 +250,8 @@ ul{list-style-type: none; padding: 0;}
 //sizes
 .btn\(small\) {
 	background-color:  var(--white);
-  	border-color: #dbdbdb;
-  	border-width: 1px;
   	color: var(--black);
   	cursor: pointer;
-  	justify-content: center;
   	padding: calc(0.25em - 1px) .5em;
   	line-height: 1.5em;
   	text-align: center;
@@ -276,11 +261,8 @@ ul{list-style-type: none; padding: 0;}
 }
 .btn\(large\) {
 	background-color:  var(--white);
-  	border-color: #dbdbdb;
-  	border-width: 1px;
   	color: var(--black);
   	cursor: pointer;
-  	justify-content: center;
   	padding: calc(.75em - 1px) 1.25em;
   	line-height: 1.5em;
   	text-align: center;
@@ -290,11 +272,8 @@ ul{list-style-type: none; padding: 0;}
 }
 .btn\(xlarge\) {
 	background-color:  var(--white);
-  	border-color: #dbdbdb;
-  	border-width: 1px;
   	color: var(--black);
   	cursor: pointer;
-  	justify-content: center;
   	padding: calc(0.25em - 1px) .5em;
   	line-height: 1.5em;
   	text-align: center;

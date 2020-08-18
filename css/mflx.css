@@ -32,22 +32,23 @@ h2 {
 h2, h3, h4, h6 {
   font-family: var(--sub-titles), "sans"; }
 
-body, p, button, a, input, submit, .link, .is-round:active {
+body, p, button, a, textarea, select, input, submit, .link {
   font-family: var(--paragraphs), "sans";
-  font-weight: 700;
   text-decoration: none;
-  outline: none; }
+  outline: none;
+  border: none;
+  padding: 0; }
 
-input:focus {
+input:focus, textarea:focus, select:focus {
   border: solid 1px var(--primary); }
 
 button:focus, submit:focus, a:focus {
   border: solid 1px black; }
 
-input, button, submit {
+input, button, submit, .is-round:active {
   border: none; }
 
-.btn\(\)[disabled], input[disabled] {
+button[disabled], input[disabled] {
   background-color: #ccc;
   color: grey; }
 
@@ -79,7 +80,7 @@ ul {
 .black {
   background-color: var(--black); }
 
-.flx\(\) {
+.flx\(\), .flx {
   display: flex; }
 
 .flx\(wrap\) {
@@ -94,21 +95,13 @@ ul {
   display: flex;
   flex-wrap: nowrap; }
 
-.flx\(nowrap\,column\) {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column; }
-
+.flx\(nowrap\,column\),
 .flx\(column\,nowrap\) {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column; }
 
-.flx\(column\,wrap\) {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; }
-
+.flx\(column\,wrap\),
 .flx\(wrap\,column\) {
   display: flex;
   flex-wrap: wrap;
@@ -180,25 +173,25 @@ ul {
 .is-2 {
   min-width: 16.666666666%; }
 
-.is-3 {
+.is-3, .is-quarter {
   min-width: 24.999999999%; }
 
-.is-4 {
+.is-4, .is-one-third {
   min-width: 33.333333333%; }
 
 .is-5 {
   min-width: 41.666666666%; }
 
-.is-6 {
+.is-6, .is-half {
   min-width: 49.999999999%; }
 
 .is-7 {
   min-width: 58.333333333%; }
 
-.is-8 {
+.is-8, .is-two-thirds {
   min-width: 66.666666666%; }
 
-.is-9 {
+.is-9, .is-three-quarters {
   min-width: 74.999999999%; }
 
 .is-10 {
@@ -207,12 +200,11 @@ ul {
 .is-11 {
   min-width: 91.666666666%; }
 
-.is-12 {
+.is-12, .is-full {
   min-width: 100%; }
 
-.btn\(\) {
+.btn\(\), .btn, .btn\(normal\) {
   background-color: var(--white);
-  border-color: #dbdbdb;
   border-width: 1px;
   color: var(--black);
   cursor: pointer;
@@ -226,11 +218,8 @@ ul {
 
 .btn\(small\) {
   background-color: var(--white);
-  border-color: #dbdbdb;
-  border-width: 1px;
   color: var(--black);
   cursor: pointer;
-  justify-content: center;
   padding: calc(0.25em - 1px) 0.5em;
   line-height: 1.5em;
   text-align: center;
@@ -240,11 +229,8 @@ ul {
 
 .btn\(large\) {
   background-color: var(--white);
-  border-color: #dbdbdb;
-  border-width: 1px;
   color: var(--black);
   cursor: pointer;
-  justify-content: center;
   padding: calc(.75em - 1px) 1.25em;
   line-height: 1.5em;
   text-align: center;
@@ -254,11 +240,8 @@ ul {
 
 .btn\(xlarge\) {
   background-color: var(--white);
-  border-color: #dbdbdb;
-  border-width: 1px;
   color: var(--black);
   cursor: pointer;
-  justify-content: center;
   padding: calc(0.25em - 1px) 0.5em;
   line-height: 1.5em;
   text-align: center;

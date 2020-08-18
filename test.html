@@ -30,19 +30,19 @@
 	<div class="flx(wrap) middle space-around padme" style="background-color: grey;">
 		<div class="flx(wrap) middle space-around is-6">
 			<button class="btn(small) is-primary is-round">A button</button>
-			<button class="btn() is-secondary is-round">Button</button>
+			<button class="btn(normal) is-secondary is-round">Button</button>
 			<input class="btn(large) is-success is-round" type="submit" name="nothing">
 			<button class="btn(xlarge) is-warning is-round">A button</button>
 		</div>
 		<div class="flx(wrap) middle space-around is-6">
 			<button class="btn(small) is-info">A button</button>
-			<a href="#" class="btn() is-error">Button</a>
+			<a href="#" class="btn is-error">Button</a>
 			<input class="btn(large) is-white" type="submit" name="nothing">
 			<button class="btn(xlarge) is-black">A button</button>
 		</div>
 		
 	</div>
-	<div class="flx(wrap) middle space-between padme" style="background-color: white;">
+	<div class="flx(wrap) middle space-between padme" style="background-color: darkgrey;">
 		<div class="flx(wrap,column) is-3">
 			<h3>and now a list!</h3>
 			<ul>
@@ -51,14 +51,22 @@
 				<li>asdf</li>
 			</ul>
 		</div>
-		<form class="flx(column) top right is-2">
-			<label>login:</label>
-			<input type="text" name="username" disabled>
-			<label >Password:</label>
-			<input type="password" name="lolwhatevs">
+		<form class="flx(column) center right is-2 ">
+			<label class="is-full">login:</label>
+			<input class="is-half padme"type="text" name="username" disabled>
+			<label class="is-full">Password:</label>
+			<input class="is-half padme" type="password" name="lolwhatevs">
+			<select class="is-full">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
+			<textarea class="is-full" width="300" height="400">
+				
+			</textarea>
 			<a class="link" href="#">alink to nowhere</a>
-			<button class="btn() is-secondary" disabled>register</button>
-			<button class="btn() is-primary" disabled>login</button>
+			<button class="btn is-secondary" disabled>register</button>
+			<button class="btn is-primary" disabled>login</button>
 		</form>
 	</div>
 </body>
