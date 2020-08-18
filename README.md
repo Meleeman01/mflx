@@ -1,4 +1,4 @@
-# mflx version 1.1.1
+# mflx version 1.1.2
 
 ##A Basic, no-frills flexbox framework for building layouts!
 <img src="https://github.com/Meleeman01/mflx/blob/master/test.html%23.png" alt="framework test" title="a test of the framework :D" />
