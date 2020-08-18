@@ -40,6 +40,7 @@ offsets are not included yet and they work with the class flx() and without. you
 
 <h2>Buttons</h2> there are buttons similar to bulma syntax btn takes one size argument, or no arguments and can be
 written as shown
+
 ```
 <div class="flx(wrap) middle space-around is-6">
 		<button class="btn(small) is-info">A button</button>
@@ -49,6 +50,7 @@ written as shown
 		<button class="btn(xlarge) is-black is-round">A button</button>
 </div>
 ```
+
 btn, btn(), and btn(normal) are synonyms for the same normal size.
 availible classes are is-primary, is-white, is-black, is-secondary, is-warning, is-info, is-error, is-success, is-round. primary, secondary, black and white are availible as accessible classes for your conveniance. so far the behavior is consistent accross button, submit and anchor tags.
 
