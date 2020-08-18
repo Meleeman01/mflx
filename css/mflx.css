@@ -10,34 +10,62 @@
   --white: #fffaff;
   --main-title:'Arial';
   --sub-titles:'Montserrat';
-  --paragraphs:'Montserrat'; }
+  --paragraphs:'Montserrat';
+  --title-size:5rem;
+  --subtitle-size:2.5rem;
+  --padme-setting:0.5em 0.5em 0.5em 0.5em;
+  --button-roundness:2em 2em 2em 2em; }
+
+:focus {
+  outline: none; }
+
+::-moz-focus-inner {
+  border: 0; }
 
 h1 {
   font-family: var(--main-title), "sans-serif";
-  font-size: 5em; }
+  font-size: var(--title-size); }
 
 h2 {
-  font-size: 2.5em; }
+  font-size: var(--subtitle-size); }
 
 h2, h3, h4, h6 {
   font-family: var(--sub-titles), "sans"; }
 
-body, p, button, a, input, submit, .link {
+body, p, button, a, input, submit, .link, .is-round:active {
   font-family: var(--paragraphs), "sans";
-  font-weight: 600;
-  text-decoration: none; }
+  font-weight: 700;
+  text-decoration: none;
+  outline: none; }
+
+input:focus {
+  border: solid 1px var(--primary); }
+
+button:focus, submit:focus, a:focus {
+  border: solid 1px black; }
 
 input, button, submit {
   border: none; }
 
+.btn\(\)[disabled], input[disabled] {
+  background-color: #ccc;
+  color: grey; }
+
 .link:link {
-  text-decoration: inherit; }
+  text-decoration: inherit;
+  color: var(--info); }
 
 .link:visited {
-  color: inherit; }
+  color: var(--info); }
 
-.link:hover {
-  color: #291900; }
+/*color lightened by 5%*/
+.link:hover, .link:focus {
+  border: 0;
+  color: #1c90d9; }
+
+ul {
+  list-style-type: none;
+  padding: 0; }
 
 .primary {
   background-color: var(--primary); }
@@ -143,6 +171,9 @@ input, button, submit {
 .space-between {
   justify-content: space-between; }
 
+.padme {
+  padding: var(--padme-setting); }
+
 .is-1 {
   min-width: 8.333333333%; }
 
@@ -235,6 +266,10 @@ input, button, submit {
   font-size: 2em;
   outline: none; }
 
+/*
+	each  color has a 2% darken for hover
+	and a 5% darken for active except is-black
+*/
 .is-primary {
   background-color: var(--primary);
   color: var(--white); }
@@ -293,7 +328,6 @@ input, button, submit {
   background-color: #ff4d52; }
 
 .is-error:active {
-  outline: #f00008;
   background-color: #ff3d44; }
 
 .is-black {
@@ -317,7 +351,4 @@ input, button, submit {
   background-color: #ffe0ff; }
 
 .is-round {
-  border-radius: 2em; }
-
-.is-round:active {
-  outline: none; }
+  border-radius: var(--button-roundness); }

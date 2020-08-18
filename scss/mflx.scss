@@ -42,29 +42,41 @@ $paragraphs:'Montserrat';
   --main-title:'#{$maintitle}';
   --sub-titles:'#{$subtitles}';
   --paragraphs:'#{$paragraphs}';
+  --title-size:5rem;
+  --subtitle-size:2.5rem;
+  --padme-setting:0.5em 0.5em 0.5em 0.5em;
+  --button-roundness:2em 2em 2em 2em;
 }
-
+:focus {outline:none;}
+::-moz-focus-inner {border:0}
 h1{
 	font-family: var(--main-title),'sans-serif';
-	font-size: 5em;
+	font-size: var(--title-size);
 }
 h2{
-	font-size: 2.5em;
+	font-size: var(--subtitle-size);
 }
 
 h2,h3,h4,h6{
 	font-family: var(--sub-titles), 'sans';
 }
-body,p,button,a,input, submit, .link{
+body,p,button,a,input, submit, .link, .is-round:active {
 	font-family: var(--paragraphs), 'sans';
-	font-weight: 600;
+	font-weight: 700;
 	text-decoration: none;
+	outline: none;
 }
+input:focus{border:solid 1px var(--primary);}
+button:focus, submit:focus, a:focus{border:solid 1px black; }
 input, button, submit { border:none; } 
+.btn\(\)[disabled],input[disabled]{background-color: #ccc; color: grey;}
 
-.link:link{text-decoration: inherit;}
-.link:visited{color: inherit;}
-.link:hover{ color:lighten($black,2%);}
+.link:link{text-decoration: inherit; color: var(--info);}
+.link:visited{color: var(--info);}
+/*color lightened by 5%*/
+.link:hover,.link:focus{ border:0; color:lighten($info,5%);}
+
+ul{list-style-type: none; padding: 0;}
 
 .primary{
  	background-color:var(--primary);
@@ -177,10 +189,13 @@ input, button, submit { border:none; }
 .space-between{
 	justify-content: space-between;
 }
+//add a little padding to your columns
+.padme {
+	padding: var(--padme-setting);
+}
 
 //columns
 .is-1{
-
 	min-width: 8.333333333%;
 }
 .is-2{
@@ -288,6 +303,10 @@ input, button, submit { border:none; }
   	outline: none;
 }
 
+/*
+	each  color has a 2% darken for hover
+	and a 5% darken for active except is-black
+*/
 //color modifiers for buttons
 .is-primary{
 	background-color: var(--primary);
@@ -349,7 +368,6 @@ input, button, submit { border:none; }
 
 }
 .is-error:active{
-	outline: darken($error,20%);
 	background-color:darken($error,5%);
 }
 
@@ -366,7 +384,6 @@ input, button, submit { border:none; }
 .is-white{
 	background-color: var(--white);
 	color: var(--black);
-	
 }
 .is-white:hover{
   		background-color:darken($white,2%);
@@ -375,9 +392,5 @@ input, button, submit { border:none; }
   		background-color:darken($white,5%);
 }
 .is-round {
-	border-radius: 2em;
-
-}
-.is-round:active {
-	outline: none;
+	border-radius: var(--button-roundness);
 }

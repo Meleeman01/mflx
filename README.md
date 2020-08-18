@@ -1,4 +1,4 @@
-# mflx version 1.1.2
+# mflx version 1.1.3
 
 ##A Basic, no-frills flexbox framework for building layouts!
 <img src="https://github.com/Meleeman01/mflx/blob/master/test.html%23.png" alt="framework test" title="a test of the framework :D" />
@@ -46,3 +46,6 @@ offsets are not included yet and they work with the class flx() and without. you
 availible classes are is-primary, is-white, is-black, is-secondary, is-warning, is-info, is-error, is-success, is-round. primary, secondary, black and white are availible as accessible classes for your conveniance. so far the behavior is consistent accross button, submit and anchor tags.
 
 ##Typography basic styles are being used, but the scss stylesheet layouts some recommendations for designing a framework, the styles used here are just default fonts every browser has, there are a maximum of 3 fonts which you can add many as you like ofcourse but 3 is generally recommended when designing. It is recommended you include a seperate fonts.scss when building or you can use the @font-face() rule in the top of this style sheet if you prefer.
+
+##Utilities 
+there isn't much but i put in a new class called padme which has it's own css variable setting, it will create a default padding for your flx() containers and you can customize each dimension with 4 numbers. inputs also use the primary color on focus. but thats about it.
