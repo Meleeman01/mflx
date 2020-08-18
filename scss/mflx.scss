@@ -69,7 +69,7 @@ body,p,button,a,textarea, select,input, submit, .link,  {
 	outline: none;
 	border: none;
 	padding: 0;
-	margin-bottom: .5em;
+	margin: .25em 0;
 }
 input:focus,textarea:focus, select:focus {border:solid 1px var(--primary);}
 button:focus, submit:focus, a:focus {border:solid 1px black; }
