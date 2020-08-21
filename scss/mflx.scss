@@ -70,6 +70,7 @@ body,p,button,a,textarea, select,input, submit, .link,  {
 	border: none;
 	padding: 0;
 	margin: .25em 0;
+	word-break: break-word; 
 }
 input:focus,textarea:focus, select:focus {border:solid 1px var(--primary);}
 button:focus, submit:focus, a:focus {border:solid 1px black; }
@@ -84,18 +85,10 @@ button[disabled],input[disabled],{background-color: #ccc; color: grey;}
 
 ul{list-style-type: none; padding: 0;}
 
-.primary{
- 	background-color:var(--primary);
-}
-.secondary{
-	background-color:var(--secondary);
-}
-.white{
-	background-color:var(--white);
-}
-.black{
-	background-color:var(--black);
-}
+.primary{background-color:var(--primary);}
+.secondary{background-color:var(--secondary);}
+.white{background-color:var(--white);}
+.black{background-color:var(--black);}
 
 //define our syntax
 .flx\(\),.flx{
@@ -195,42 +188,19 @@ ul{list-style-type: none; padding: 0;}
 }
 
 //columns
-.is-1{
-	min-width: 8.333333333%;
-}
-.is-2{
-  	min-width: 16.666666666%;
-}
-.is-3,.is-quarter{
-  	min-width: 24.999999999%;
-}
-.is-4, .is-one-third{
-  	min-width: 33.333333333%;
-}
-.is-5{
-  	min-width: 41.666666666%;
-}
-.is-6,.is-half{
-  	min-width: 49.999999999%;
-}
-.is-7{
-  	min-width: 58.333333333%;
-}
-.is-8, .is-two-thirds{
-  	min-width: 66.666666666%;
-}
-.is-9,.is-three-quarters{
-  	min-width: 74.999999999%;
-}
-.is-10{
-  	min-width: 83.333333333%;
-}
-.is-11{
-  	min-width: 91.666666666%;
-}
-.is-12, .is-full{
-  	min-width: 100%;
-}
+.is-1{min-width: 8.333333333%;}
+.is-2{min-width: 16.666666666%;}
+.is-3,.is-quarter{min-width: 24.999999999%;}
+.is-4, .is-one-third{min-width: 33.333333333%;}
+.is-5{min-width: 41.666666666%;}
+.is-6,.is-half{min-width: 49.999999999%;}
+.is-7{min-width: 58.333333333%;}
+.is-8, .is-two-thirds{min-width: 66.666666666%;}
+.is-9,.is-three-quarters{min-width: 74.999999999%;}
+.is-10{min-width: 83.333333333%;}
+.is-11{min-width: 91.666666666%;}
+.is-12, .is-full{min-width: 100%;}
+.is-fluid {min-width: 0;}
 
 //use on a div span or button ofcourse
 //usage btn(size,type) color
