@@ -1,4 +1,4 @@
-# mflx version 1.1.4
+# mflx version 1.1.5
 
 <h1>A Basic, highly customizeable, no-frills micro flexbox framework for building layouts!</h1>
 <h2>npm install mflex --save</h2>
@@ -25,7 +25,7 @@ as you can see, flx() takes a maximum of 2 arguments exactly as shown. options a
 flx() can also be written as flx.
 if your children are flx() containers, you can use v-space-around, v-space-between,v-bottom,v-baseline, v-top, v-middle, v-stretch, which does what thier non-v counterparts do vertically.
 
-also you can do columns! syntax uses "is" like in bulma, and you can say anywhere from is-1 to is-12 like in bulma you can also say is-full, is-quarter, is-three-quarters, is-third, is-two-thirds.
+also you can do columns! syntax uses "is" like in bulma, and you can say anywhere from is-1 to is-12 like in bulma you can also say is-full, is-quarter, is-three-quarters, is-third, is-two-thirds. is-fluid is basically setting the min-width of your container to 0, which allows you to have text wrap. use this when you don't need a specific container size but need text and other things to wrap.
 ```
 <div class="flx(wrap) center f-space-around is-12">
 	<div class="flx(wrap) is-6">
@@ -53,6 +53,7 @@ btn, btn(), and btn(normal) are synonyms for the same normal size.
 availible classes are is-primary, is-white, is-black, is-secondary, is-warning, is-info, is-error, is-success, is-round. primary, secondary, black and white are availible as accessible classes for your conveniance. so far the behavior is consistent accross button, submit and anchor tags.
 
 <h2>Typography</h2> basic styles are being used, but the scss stylesheet layouts some recommendations for designing a framework, the styles used here are just default fonts every browser has, there are a maximum of 3 fonts which you can add many as you like ofcourse but 3 is generally recommended when designing. It is recommended you include a seperate fonts.scss when building or you can use the @font-face() rule in the top of this style sheet if you prefer.
+words and letters wrap by default, so this can reduce the usage of media queries for text. may add clamp() if browser support becomes more availible for it.
 
 <h2>Utilities</h2> 
 there isn't much but i put in a new class called padme which has it's own css variable setting, it will create a default padding for your flx() containers and you can customize each dimension with 4 numbers. inputs also use the primary color on focus. but thats about it.
