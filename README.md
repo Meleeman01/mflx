@@ -1,7 +1,7 @@
 # mflx version 1.1.5
 
 <h1>A Basic, highly customizeable, no-frills micro flexbox framework for building layouts!</h1>
-<h2>npm install mflex --save</h2>
+<h2>npm install mflx --save</h2>
 <img src="https://github.com/Meleeman01/mflx/blob/master/test.html%23.png" alt="framework test" title="a test of the framework :D" />
 
 
@@ -27,7 +27,7 @@ if your children are flx() containers, you can use v-space-around, v-space-betwe
 
 also you can do columns! syntax uses "is" like in bulma, and you can say anywhere from is-1 to is-12 like in bulma you can also say is-full, is-quarter, is-three-quarters, is-third, is-two-thirds. is-fluid is basically setting the min-width of your container to 0, which allows you to have text wrap. use this when you don't need a specific container size but need text and other things to wrap.
 ```
-<div class="flx(wrap) center f-space-around is-12">
+<div class="flx(wrap) center v-space-around is-12">
 	<div class="flx(wrap) is-6">
 		<div class="item1">listItem</div>
 	</div>
