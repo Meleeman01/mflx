@@ -36,6 +36,9 @@ also you can do columns! syntax uses "is" like in bulma, and you can say anywher
 	</div>
 </div>
 ```
+
+flx(column), or any other syntax that contains column has a weird behavior when you apply the .left class for alignment. the up down directions are now inverted. to avoid confusion, simply prefix with col- (i.e. col-top). note that space-around, space-between, and space-evenly now work in the y direction and they also have prefixes which are there to help you differentiate your positions flx(column) containers from your other flx containers. if you need to space items around in the x-direction, use flx or any other flx container without column in the syntax.
+
 offsets are not included yet and they work with the class flx() and without. you can create invisible divs to create the desired offset for the time being.
 
 <h2>Buttons</h2> there are buttons similar to bulma syntax btn takes one size argument, or no arguments and can be

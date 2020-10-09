@@ -39,10 +39,12 @@ body, p, button, a, textarea, select, input, submit, .link {
   border: none;
   padding: 0;
   margin: .25em 0;
+  line-height: 1;
   word-break: break-word; }
 
 input:focus, textarea:focus, select:focus {
-  border: solid 1px var(--primary); }
+  border: solid 1px var(--primary);
+  border-radius: 4px; }
 
 button:focus, submit:focus, a:focus {
   border: solid 1px black; }
@@ -110,16 +112,16 @@ ul {
   flex-direction: column; }
 
 /*vertical alignment for non flex items*/
-.top {
+.top, .col-left {
   align-items: flex-start; }
 
-.bottom {
+.bottom, .col-right {
   align-items: flex-end; }
 
 .baseline {
   align-items: baseline; }
 
-.middle {
+.middle, .col-center {
   align-items: center; }
 
 .stretch {
@@ -148,22 +150,22 @@ ul {
   align-content: space-around; }
 
 /*horizontal alignment*/
-.left {
+.left, .col-top {
   justify-content: flex-start; }
 
-.right {
+.right, .col-bottom {
   justify-content: flex-end; }
 
-.center {
+.center, .col-middle {
   justify-content: center; }
 
-.space-evenly {
+.space-evenly, .col-space-evenly {
   justify-content: space-evenly; }
 
-.space-around {
+.space-around, .col-space-around {
   justify-content: space-around; }
 
-.space-between {
+.space-between, .col-space-between {
   justify-content: space-between; }
 
 .padme {
