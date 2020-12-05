@@ -22,6 +22,7 @@
 
 ::-moz-focus-inner {
   border: 0; }
+body{margin:0;}
 
 h1 {
   font-family: var(--main-title), "sans-serif";
@@ -29,7 +30,7 @@ h1 {
 
 h2 {
   font-size: var(--subtitle-size); }
-
+h1,h2{word-break: break-word}
 h2, h3, h4, h5, h6 {
   font-family: var(--sub-titles), "sans"; }
 
