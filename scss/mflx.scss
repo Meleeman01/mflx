@@ -46,6 +46,7 @@ $paragraphs:'Montserrat';
   --subtitle-size:2.5rem;
   --padme-setting:0.5em 0.5em 0.5em 0.5em;
   --button-roundness:2em 2em 2em 2em;
+  --marginme-setting:0.5em 0em 0.5em 0em;
 }
 
 :focus {outline:none;}
@@ -59,27 +60,32 @@ h2{
 	font-size: var(--subtitle-size);
 }
 
-h2,h3,h4,h6{
+h2,h3,h4,h5,h6{
 	font-family: var(--sub-titles), 'sans';
 }
 
-body,p,button,a,textarea, select,input, submit, .link,  {
+p,button,a,textarea,li,label,span,select,input, .link, {
 	font-family: var(--paragraphs), 'sans';
 	text-decoration: none;
 	outline: none;
 	border: none;
 	padding: 0;
+	line-height: 1.5;
+	word-break: break-word;
+}
+input,p,.link{
 	margin: .25em 0;
-	line-height: 1;
-	word-break: break-word; 
+}
+img,video {
+	max-width: 100%;
 }
 input:focus,textarea:focus, select:focus {border:solid 1px var(--primary); border-radius: 4px;}
-button:focus, submit:focus, a:focus {border:solid 1px black; }
+button:focus, a:focus {border:solid 1px black; }
 
 input, button, submit,.is-round:active{ border:none; } 
 button[disabled],input[disabled],{background-color: #ccc; color: grey;}
 
-.link:link{text-decoration: inherit; color: var(--info);}
+.link:link{text-decoration: none; color: var(--info);}
 .link:visited{color: var(--info);}
 /*color lightened by 5%*/
 .link:hover,.link:focus{ border:0; color:lighten($info,5%);}
@@ -187,21 +193,24 @@ ul{list-style-type: none; padding: 0;}
 .padme {
 	padding: var(--padme-setting);
 }
+.marginme {
+	margin: var(--marginme-setting);
+}
 
 //columns
-.is-1{min-width: 8.333333333%;}
-.is-2{min-width: 16.666666666%;}
-.is-3,.is-quarter{min-width: 24.999999999%;}
-.is-4, .is-one-third{min-width: 33.333333333%;}
+.is-1{min-width: 8.333333333%}
+.is-2{min-width: 16.666666666%}
+.is-3,.is-quarter{min-width: 24.999999999%}
+.is-4, .is-one-third{min-width: 33.333333333%}
 .is-5{min-width: 41.666666666%;}
-.is-6,.is-half{min-width: 49.999999999%;}
-.is-7{min-width: 58.333333333%;}
-.is-8, .is-two-thirds{min-width: 66.666666666%;}
-.is-9,.is-three-quarters{min-width: 74.999999999%;}
-.is-10{min-width: 83.333333333%;}
-.is-11{min-width: 91.666666666%;}
-.is-12, .is-full{min-width: 100%;}
-.is-fluid {min-width: 0;}
+.is-6,.is-half{min-width: 49.999999999%}
+.is-7{min-width: 58.333333333%}
+.is-8, .is-two-thirds{min-width: 66.666666666%}
+.is-9,.is-three-quarters{min-width: 74.999999999%}
+.is-10{min-width: 83.333333333%}
+.is-11{min-width: 91.666666666%}
+.is-12, .is-full{min-width: 100%}
+.is-fluid {min-width: 0}
 
 //use on a div span or button ofcourse
 //usage btn(size,type) color
@@ -262,86 +271,92 @@ ul{list-style-type: none; padding: 0;}
 .is-primary{
 	background-color: var(--primary);
 	color: var(--white);
+	&:hover {
+		background-color:darken($primary,2%);
+	}
+	&:active {
+		background-color:darken($primary,5%);
+	}
 }
-.is-primary:hover{
-	background-color:darken($primary,2%);
-}
-.is-primary:active{
-	background-color:darken($primary,5%);
-}
+
 .is-secondary{
 	background-color: var(--secondary);
 	color: var(--white);
+	&::hover{
+		background-color:darken($secondary,2%);
+	}
+	&:active{
+		background-color:darken($secondary,5%);
+	}
 }
-.is-secondary:hover{
-	background-color:darken($secondary,2%);
-}
-.is-secondary:active{
-	background-color:darken($secondary,5%);
-}
+
 .is-success{
 	background-color: var(--success);
 	color: var(--black);
+	&:hover{
+		background-color:darken($success,2%);
+	}
+	&:active{
+		background-color:darken($success,5%);
+	}
 }
-.is-success:hover{
-	background-color:darken($success,2%);
-}
-.is-success:active{
-	background-color:darken($success,5%);
-}
+
 .is-warning{
 	background-color: var(--warning);
 	color: var(--black);
+	&:hover{
+		background-color:darken($warning,2%);
+	}
+	&:active{
+		background-color:darken($warning,5%);
+	}
 }
-.is-warning:hover{
-	background-color:darken($warning,2%);
-}
-.is-warning:active{
-	background-color:darken($warning,5%);
-}
+
 .is-info{
 	background-color: var(--info);
 	color: var(--white);
+	a:hover{
+		background-color:darken($info,2%);
+	}
+	a:active{
+		background-color:darken($info,5%);
+	}
 }
-.is-info:hover{
-	background-color:darken($info,2%);
-}
-.is-info:active{
-	background-color:darken($info,5%);
-}
+
 .is-error{
 	background-color: var(--error);
 	color: var(--white);
-	
+	&:hover{
+  		background-color:darken($error,2%);
+	}
+	&:active{
+		background-color:darken($error,5%);
+	}
 }
-.is-error:hover{
-  	background-color:darken($error,2%);
 
-}
-.is-error:active{
-	background-color:darken($error,5%);
-}
 
 .is-black{
 	background-color: var(--black);
 	color: var(--white);
+	&:hover{
+		background-color:darken($black,2%);
+	}
+	&:active{
+		background-color:var(--black);
+	}
 }
-.is-black:hover{
-	background-color:darken($black,2%);
-}
-.is-black:active{
-	background-color:var(--black);
-}
+
 .is-white{
 	background-color: var(--white);
 	color: var(--black);
-}
-.is-white:hover{
+	&:hover{
   		background-color:darken($white,2%);
-}
-.is-white:active{
+	}
+	&:active{
   		background-color:darken($white,5%);
+	}
 }
+
 .is-round {
 	border-radius: var(--button-roundness);
 }

@@ -3,6 +3,7 @@
 <head>
 	<title>mflx framework!</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
 	<style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 </style>
@@ -20,10 +21,18 @@
 			<h4>heading4</h4>
 			<h5>heading5</h5>
 		</div>
-		<div class="flx(wrap,column) col-middle col-center is-1">
-			<p>paragram1</p>
-			<p>paragram2</p>
-			<p>paragram3</p>
+		<div class="flx(wrap,column) col-middle col-center is-12" style="margin-bottom: 2rem;">
+			<div class="flx(wrap) space-around middle is-12">
+				<img src="http://placekitten.com/300/300"/>
+				<div class="flx(wrap) center" style="max-width: 50rem;">
+					<p class="">paragram1: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
 		</div>
 		
 	</div>
@@ -43,7 +52,7 @@
 		
 	</div>
 	<div class="flx(wrap) middle space-between padme" style="background-color: darkgrey;">
-		<div style="height: 20em;" class="flx(column) col-middle col-left is-2">
+		<div style="height: 20em;" class="flx(column) col-middle col-left is-6">
 			<h3>and now a list!</h3>
 			<ul>
 				<li>asdf</li>
@@ -57,12 +66,13 @@
 			<input class="is-fluid padme"type="text" name="username" disabled>
 			<label class="is-full">Password:</label>
 			<input class="is-fluid padme" type="password" name="lolwhatevs">
-			<select class="is-full padme">
+			<label class="is-fluid">Select an Option</label>
+			<select class="is-full marginme padme">
 				<option>1</option>
 				<option>2</option>
 				<option>3</option>
 			</select>
-			<textarea class="is-full" width="300" height="400">
+			<textarea class="is-fluid padme" width="292" height="400">
 				
 			</textarea>
 			<a class="link" href="#">alink to nowhere</a>

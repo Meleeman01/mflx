@@ -1,4 +1,4 @@
-# mflx version 1.1.6
+# mflx version 1.1.7
 
 <h1>A Basic, highly customizeable, no-frills micro flexbox framework for building layouts!</h1>
 <h2>npm install mflx --save</h2>
@@ -56,9 +56,20 @@ written as shown
 
 btn, btn(), and btn(normal) are synonyms for the same normal size.
 availible classes are is-primary, is-white, is-black, is-secondary, is-warning, is-info, is-error, is-success, is-round. primary, secondary, black and white are availible as accessible classes for your conveniance. so far the behavior is consistent accross button, submit and anchor tags.
+<h2>Links</h2>
+you can use .link class to apply link styles to a nav bar. colors are also customizeable.
 
 <h2>Typography</h2> basic styles are being used, but the scss stylesheet layouts some recommendations for designing a framework, the styles used here are just default fonts every browser has, there are a maximum of 3 fonts which you can add many as you like ofcourse but 3 is generally recommended when designing. It is recommended you include a seperate fonts.scss when building or you can use the @font-face() rule in the top of this style sheet if you prefer.
 words and letters wrap by default, so this can reduce the usage of media queries for text. may add clamp() if browser support becomes more availible for it.
 
+
 <h2>Utilities</h2> 
-there isn't much but i put in a new class called padme which has it's own css variable setting, it will create a default padding for your flx() containers and you can customize each dimension with 4 numbers. inputs also use the primary color on focus. but thats about it.
+there isn't much but i put in a new class called padme as well as marginme which have their own css variable setting, it will create a default padding and default margins for your flx() containers and you can customize each dimension with 4 numbers. inputs also use the primary color on focus. but thats about it.
+
+<h2>Potential pitfalls and how to solve them</h2>
+<h3>paragraphs</h3> can break your flex containers. the solution is to give your paragraph elements a defined with using rem or em, otherwise
+paragraphs will fill width of the container. a complimentary library of components will be added to mflx in the future to make this 
+process easier.
+<h3>mobile styles</h3>
+occaisionally it is possible to break your html page using mflx, i've found the best way is to leave html and body tags alone if you can and that they are displaying as block elements, and use a section tag to break apart your site into sections, or use it as a wrapper.
+
