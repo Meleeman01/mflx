@@ -5,10 +5,10 @@
 <img src="https://github.com/Meleeman01/mflx/blob/master/test.html%23.png" alt="framework test" title="a test of the framework :D" />
 
 <h2>Recent Changes:</h2>
-```
--removed v- prefixed commands like v-space-around. updated node-sass dependency.
-```
-removed
+
+-removed v- prefixed commands like v-space-around.
+-updated node-sass dependency.
+
 
 <h2>Usage</h2>
 
@@ -20,18 +20,17 @@ basically this is a barebones wrapper for flexbox and makes it more conveniant t
 ```
 as you can see, flx() takes a maximum of 2 arguments exactly as shown. options are wrap, nowrap, and column, but more complex positioning can be applied if you have children that also have class flx() as shown below.
 ```
-<div class="flx(wrap) middle v-space-around">
+<div class="flx(wrap) middle space-around">
 	<div class="flx(wrap)">
 		<div class="item1">listItem</div>
 	</div>
 </div>
 ```
 flx() can also be written as flx.
-if your children are flx() containers, you can use v-space-around, v-space-between,v-bottom,v-baseline, v-top, v-middle, v-stretch, which does what thier non-v counterparts do vertically.
 
 also you can do columns! syntax uses "is" like in bulma, and you can say anywhere from is-1 to is-12 like in bulma you can also say is-full, is-quarter, is-three-quarters, is-third, is-two-thirds. is-fluid is basically setting the min-width of your container to 0, which allows you to have text wrap. use this when you don't need a specific container size but need text and other things to wrap.
 ```
-<div class="flx(wrap) center v-space-around is-12">
+<div class="flx(wrap) center space-around is-12">
 	<div class="flx(wrap) is-6">
 		<div class="item1">listItem</div>
 	</div>
