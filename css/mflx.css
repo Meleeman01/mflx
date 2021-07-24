@@ -22,7 +22,6 @@
 
 ::-moz-focus-inner {
   border: 0; }
-body{margin:0;}
 
 h1 {
   font-family: var(--main-title), "sans-serif";
@@ -30,7 +29,7 @@ h1 {
 
 h2 {
   font-size: var(--subtitle-size); }
-h1,h2{word-break: break-word}
+
 h2, h3, h4, h5, h6 {
   font-family: var(--sub-titles), "sans"; }
 
@@ -133,28 +132,6 @@ ul {
 
 .stretch {
   align-items: stretch; }
-
-/*vertical alignment for 'flexible' children*/
-.v-top {
-  align-content: flex-start; }
-
-.v-bottom {
-  align-content: flex-end; }
-
-.v-baseline {
-  align-content: baseline; }
-
-.v-middle {
-  align-content: center; }
-
-.v-stretch {
-  align-content: stretch; }
-
-.v-space-between {
-  align-content: space-between; }
-
-.v-space-around {
-  align-content: space-around; }
 
 /*horizontal alignment*/
 .left, .col-top {

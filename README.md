@@ -1,10 +1,14 @@
-# mflx version 1.1.7
+# mflx version 1.1.8
 
 <h1>A Basic, highly customizeable, no-frills micro flexbox framework for building layouts!</h1>
 <h2>npm install mflx --save</h2>
 <img src="https://github.com/Meleeman01/mflx/blob/master/test.html%23.png" alt="framework test" title="a test of the framework :D" />
 
-
+<h2>Recent Changes:</h2>
+```
+-removed v- prefixed commands like v-space-around. updated node-sass dependency.
+```
+removed
 
 <h2>Usage</h2>
 

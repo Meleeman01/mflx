@@ -146,27 +146,6 @@ ul{list-style-type: none; padding: 0;}
 	align-items:stretch;
 }
 
-/*vertical alignment for 'flexible' children*/
-.v-top {
-  align-content: flex-start; }
-
-.v-bottom {
-  align-content: flex-end; }
-
-.v-baseline {
-  align-content: baseline; }
-
-.v-middle {
-  align-content: center; }
-
-.v-stretch {
-  align-content: stretch; }
-.v-space-between {
-	align-content:space-between;
-}
-.v-space-around {
-	align-content:space-around;
-}
 
 /*horizontal alignment*/
 
