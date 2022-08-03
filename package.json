@@ -1,11 +1,10 @@
 {
   "name": "mflx",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A flexible micro-framework for creating layouts with flexbox",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "npx node-sass -w scss -o css"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

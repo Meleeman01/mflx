@@ -1,4 +1,4 @@
-# mflx version 1.1.8
+# mflx version 1.2.1
 
 <h1>A Basic, highly customizeable, no-frills micro flexbox framework for building layouts!</h1>
 <h2>npm install mflx --save</h2>
