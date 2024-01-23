@@ -69,6 +69,36 @@ words and letters wrap by default, so this can reduce the usage of media queries
 <h2>Utilities</h2> 
 there isn't much but i put in a new class called padme as well as marginme which have their own css variable setting, it will create a default padding and default margins for your flx() containers and you can customize each dimension with 4 numbers. inputs also use the primary color on focus. but thats about it.
 
+
+## Margin and Padding Utilities
+
+This CSS code defines a set of custom properties for margin and padding intervals, named `--mp-1-setting` through `--mp-5-setting`. These properties are then used to create utility classes for setting margin and padding values in increments of corresponding --mp-(x)-setting variable setting
+
+### Custom Properties:
+
+- `--mp-1-setting` to `--mp-5-setting`: Custom properties representing different margin and padding intervals, ranging from `0.25rem` to `2rem`.
+
+### Margin Classes:
+
+- `.mt-1` to `.mt-5`: Sets margin-bottom in increments of the corresponding --mp-(x)-setting variable setting
+- `.mb-1` to `.mb-5`: Sets margin-bottom in increments of the corresponding --mp-(x)-setting variable setting
+- `.ml-1` to `.ml-5`: Sets margin-left in increments of the corresponding --mp-(x)-setting variable setting
+- `.mr-1` to `.mr-5`: Sets margin-right in increments of the corresponding --mp-(x)-setting variable setting
+
+### Padding Classes:
+
+- `.pb-1` to `.pb-5`: Sets padding-bottom in increments of the corresponding --mp-(x)-setting variable setting
+- `.pl-1` to `.pl-5`: Sets padding-left in increments of the corresponding --mp-(x)-setting variable setting
+- `.pr-1` to `.pr-5`: Sets padding-right in increments of the corresponding --mp-(x)-setting variable setting
+- `.pt-1` to `.pt-5`: Sets padding-top in increments of the corresponding --mp-(x)-setting variable setting
+
+Each class is named according to the property it sets (`m` for margin, `p` for padding) and the direction or axis (`t` for top, `b` for bottom, `l` for left, `r` for right), followed by a number indicating the interval.
+
+For example, `.mt-3` sets a margin-top value based on the third predefined interval (`--mp-3-setting`). This structure provides a systematic way for developers to apply consistent spacing throughout their project by using these utility classes.
+
+## Dark Mode:
+there is a new dark mode filter which inverts the color styles to a simple dark mode. set `--ez-dark-theme:0;` like so to turn off, or 1 to turn on. this feature maybe buggy and if you don't want your items to be inverted, simply invert the colors again. by default, img and video tags retain their original colors.
+
 <h2>Potential pitfalls and how to solve them</h2>
 <h3>paragraphs</h3> can break your flex containers. the solution is to give your paragraph elements a defined with using rem or em, otherwise
 paragraphs will fill width of the container. a complimentary library of components will be added to mflx in the future to make this 
